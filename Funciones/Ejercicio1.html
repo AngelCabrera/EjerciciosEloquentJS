@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function min</title>
+</head>
+<body>
+	<p>Mira la consola</p>
+	<script>
+		function min (valor1,valor2){
+			if (valor1 < valor2){
+				return valor1;
+			}
+			else if (valor2 < valor1){
+				return valor2;
+			}
+			else {
+				return "El valor es el mismo";
+			}
+		}
+
+		console.log(min(0,10));
+		console.log(min(0,-10));
+	</script>
+</body>
+</html>
