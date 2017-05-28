@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function esPar</title>
+</head>
+<body>
+<script>
+	function esPar(n){
+		if (n < 0) {
+			n = n*-1;
+		}
+		if (n == 0) {
+			return "Es par";
+		}
+		else if (n == 1){
+			return "Es impar";
+		}
+		else{
+			return esPar(n-2);
+		}
+	}
+	console.log(esPar(50));	
+	console.log(esPar(75));
+	console.log(esPar(-2));
+</script>
+</body>
+</html>
