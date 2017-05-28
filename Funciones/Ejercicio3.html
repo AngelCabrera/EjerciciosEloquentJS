@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contando Frijoles</title>
+</head>
+<body>
+	<p>Mira la cónsola</p>
+	<script>
+		function cuentaFs(chain, character){
+			var i = chain.length -1;
+			var contador = 0;
+			for (j = 0; j < i; j++){
+				if (chain.charAt(j) == character){
+					contador ++;
+				}
+			}
+			return contador;
+		}
+
+		console.log(cuentaFs("FFC", "F"));
+		console.log(cuentaFs("ferrocarril", "r"));
+	</script>
+</body>
+</html>
