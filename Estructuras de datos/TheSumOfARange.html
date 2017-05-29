@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The sum of a Range</title>
+</head>
+<body>
+	<h1>Mira la cónsola</h1>
+	<script>
+	
+		function range(i,j)	
+		{
+			var array = [];
+			if (i < j){
+				for (i; i <= j; i++){
+					array.push(i);
+				}
+				
+			}
+			else{
+				for (i; i >= j; i--){
+					array.push(i);
+				}
+			}
+			return array;
+		}
+
+		function sum(array){
+			console.log(array)
+			var acumulador = 0;
+			array.forEach(function(element){
+				acumulador += element;
+			})
+			return acumulador;
+		}
+
+		console.log(range(1, 10));
+		console.log(range(5, 2, -1));
+		console.log(sum(range(1, 10)));
+	</script>
+</body>
+</html>
