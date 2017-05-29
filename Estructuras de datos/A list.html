@@ -1,0 +1,44 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>A list</title>
+	</head>
+	<body>
+		<h1>Verify your console</h1>
+		<script>
+			function arrayToList(array){
+				var list = {}
+				for (node = array.length -1; node >= 0; node--){
+					list = {value: array[node], rest: list};
+				}
+				return list;
+			}
+			function listToArray(list){
+				var array = [];
+				for (node = list; node.rest; node = node.rest){
+					array.push(node.value);
+				}
+				return array;
+			}
+			function prepend(node, list){
+				list = { value: node, rest: list };
+				return list;
+			}
+			function nth(list, position){
+				var iteration = 0;
+				for (node = list; node.rest; node = node.rest){
+					if(iteration == position){
+						return node.value;
+					}
+					iteration++;
+				}
+			}
+
+			console.log(arrayToList([10, 20, 30]));
+			console.log(listToArray(arrayToList([10, 20, 30])));
+			console.log(prepend(10, prepend(20, null)));
+			console.log(nth(arrayToList([10, 20, 30]), 0));
+		</script>
+	</body>
+	</html>
